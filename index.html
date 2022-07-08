@@ -11,14 +11,16 @@
     <section class="main">
         <header class="header">
             <a href="#"><img src="images/logo.png" class="logo"></a>
-            <nav>
-                <ul class="navigation">
-                    <li><a href="#">Top Feactures</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Store</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="toggle">
+                
+            </div>
+             <ul class="navigation">
+                <li><a href="#">Top Feactures</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+             </ul>
+            
         </header>
         <div class="content">
             <h2>Ready To <span>Race</span></h2>
@@ -48,7 +50,7 @@
                 <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
             </ul>
 
-            <p>Developer <span>Miguel Cardenas</span></p>
+            <p class="dev">Developer <span>Miguel Cardenas</span></p>
             
             <div class="dots">
                 <span class="dot active"></span>
@@ -62,6 +64,15 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <script>
+        //Nav
+        const toggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        toggle.onclick= function() {
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        //Slider
         const slides = document.querySelectorAll('.slides');
         const dots = document.querySelectorAll('.dot');
 
